@@ -1,0 +1,11 @@
+pluginManagement {
+    repositories {
+        maven { url = "https://maven.fabricmc.net/" } // Fabric Loom
+        mavenCentral()
+        gradlePluginPortal()
+        maven { url = "https://api.modrinth.com/maven" } // For spell-engine, spell-power
+    }
+}
+
+rootProject.name = "storm_knight"
+

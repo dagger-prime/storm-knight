@@ -1,0 +1,56 @@
+plugins {
+    id 'fabric-loom' version '1.11-SNAPSHOT'
+    id 'java'
+}
+
+group = "net.stormknight"
+version = "1.0.0"
+
+base {
+    archivesName = "storm_knight"
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+    withSourcesJar()
+}
+
+
+repositories {
+    mavenCentral()
+    maven { url = "https://maven.fabricmc.net/" }
+    maven { url = "https://api.modrinth.com/maven" }
+}
+
+dependencies {
+    // Minecraft + Yarn mappings (for net.minecraft.item.*, registry.*, etc.)
+    minecraft "com.mojang:minecraft:1.21.1"
+    mappings "net.fabricmc:yarn:1.21.1+build.3:v2"
+
+    modImplementation "net.fabricmc:fabric-loader:0.15.0"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:0.115.6+1.21.1"
+
+    modImplementation "maven.modrinth:spell-engine:1.8.2+1.21.1-fabric"
+    modImplementation "maven.modrinth:spell-power:1.4.0+1.21.1-fabric"
+}
+
+loom {
+    splitEnvironmentSourceSets()
+
+    mods {
+        "storm_knight" {
+            sourceSet sourceSets.main
+        }
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = "UTF-8"
+}
+
+tasks.remapJar {
+    archiveFileName = "storm_knight-1.0.0.jar"
+}
+
+tasks.build.dependsOn tasks.remapJar

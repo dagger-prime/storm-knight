@@ -1,0 +1,60 @@
+{
+  "type": "spell_engine:spell",
+  "school": "spell_power:lightning",
+  "cast_type": "active",
+  "group": "primary",
+  "tier": 1,
+  "sub_tier": 2,
+  "range": 8.0,
+  "lifetime": 20,
+  "active": {
+    "cast": {
+      "duration": 1.0,
+      "animation": "spell_engine:one_handed_projectile_charge",
+      "cooldown": 6.0,
+      "sound": {
+        "id": "minecraft:item.trident.riptide_2",
+        "pitch": 1.0,
+        "volume": 0.9
+      }
+    }
+  },
+  "release": {
+    "shape": "self",
+    "movement": {
+      "type": "dash",
+      "distance": 6.0,
+      "y_offset": 0.1,
+      "speed": 1.2
+    }
+  },
+  "impacts": [
+    {
+      "type": "damage",
+      "base_value": 6.0,
+      "scaling": 1.0,
+      "aoe": {
+        "shape": "sphere",
+        "radius": 3.0
+      },
+      "sound": {
+        "id": "minecraft:block.anvil.land",
+        "pitch": 1.1,
+        "volume": 0.9
+      }
+    },
+    {
+      "type": "status_effect",
+      "effect": "minecraft:slowness",
+      "duration": 40,
+      "amplifier": 1,
+      "aoe": {
+        "shape": "sphere",
+        "radius": 3.0
+      }
+    }
+  ],
+"cost": {
+  "rpgmana": 10
+  }
+}

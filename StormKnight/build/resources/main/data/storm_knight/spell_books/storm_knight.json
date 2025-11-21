@@ -1,0 +1,14 @@
+{
+  "id": "storm_knight:storm_knight",
+  "max_level": 2,
+  "class_id": "storm_knight:storm_knight",
+  "spells": {
+    "tag": "storm_knight:storm_knight_spells"
+  },
+  "weapon_restrictions": {
+    "allowed_tags": [
+      "minecraft:swords",
+      "minecraft:axes"
+    ]
+  }
+}

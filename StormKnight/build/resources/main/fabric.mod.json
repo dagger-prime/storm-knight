@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "storm_knight",
+  "version": "1.0.0",
+  "name": "Storm Knight",
+  "description": "Adds the Storm Knight class spell book and lightning-themed spells.",
+  "authors": [
+    "YourNameHere"
+  ],
+  "contact": {
+    "sources": "https://example.com/your_repo"
+  },
+  "license": "MIT",
+  "icon": "assets/storm_knight/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.stormknight.fabric.FabricMod"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.15.0",
+    "minecraft": "~1.21.1",
+    "fabric": "*",
+    "spell_engine": "*",
+    "spell_power": "*",
+    "rpgmana": "*"
+  }
+}

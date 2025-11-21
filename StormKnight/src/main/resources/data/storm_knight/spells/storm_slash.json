@@ -1,0 +1,45 @@
+{
+  "type": "spell_engine:spell",
+  "school": "spell_power:lightning",
+  "cast_type": "active",
+  "group": "primary",
+  "tier": 1,
+  "sub_tier": 1,
+  "range": 4.0,
+  "lifetime": 10,
+  "active": {
+    "cast": {
+      "duration": 0.6,
+      "animation": "spell_engine:one_handed_melee",
+      "cooldown": 2.0,
+      "sound": {
+        "id": "minecraft:item.trident.throw",
+        "pitch": 1.2,
+        "volume": 0.8
+      }
+    }
+  },
+  "release": {
+    "shape": "arc",
+    "hitbox": {
+      "horizontal_angle": 60.0,
+      "length": 4.0,
+      "height": 2.0
+    }
+  },
+  "impacts": [
+    {
+      "type": "damage",
+      "base_value": 4.0,
+      "scaling": 0.8,
+      "sound": {
+        "id": "minecraft:entity.lightning_bolt.thunder",
+        "pitch": 1.4,
+        "volume": 0.7
+      }
+    }
+  ],
+"cost": {
+  "rpgmana": 10
+  }
+}
